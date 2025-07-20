@@ -1,0 +1,14 @@
+body {
+  background-color: #121212;  /* Dark gray/near-black background */
+  color: #f0f0f0;             /* Light gray text for good contrast */
+  font-family: Arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  color: #00ffcc;  /* Bright teal - highly visible on dark bg */
+}
+
+p {
+  color: #cccccc;
+}
