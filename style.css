@@ -1,4 +1,6 @@
-/* Base Reset & Dark Theme */
+/* ===========================
+   Base Reset & Typography
+   =========================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,14 +14,18 @@ body {
   line-height: 1.6;
 }
 
-/* Containers */
+/* ===========================
+   Layout & Containers
+   =========================== */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header & Nav */
+/* ===========================
+   Header & Navigation
+   =========================== */
 .site-header {
   background-color: #1f1f1f;
   padding: 1rem 2rem;
@@ -53,7 +59,14 @@ body {
   color: #00bcd4;
 }
 
-/* Hero Section */
+/* ===========================
+   Hero Section (Home Page)
+   =========================== */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at top, #1e1e1e, #121212);
+}
 
 .profile-pic {
   width: 150px;
@@ -62,12 +75,6 @@ body {
   object-fit: cover;
   border: 2px solid #00bcd4;
   margin-bottom: 1.5rem;
-}
-
-.hero {
-  text-align: center;
-  padding: 6rem 2rem;
-  background: radial-gradient(circle at top, #1e1e1e, #121212);
 }
 
 .hero h2 {
@@ -82,6 +89,10 @@ body {
   margin: 0 auto;
 }
 
+/* ===========================
+   Buttons & Links
+   =========================== */
+   
 .btn {
   display: inline-block;
   margin-top: 2rem;
@@ -98,7 +109,9 @@ body {
   background-color: #4dd0e1;
 }
 
-/* Footer */
+/* ===========================
+   Footer
+   =========================== */
 .site-footer {
   background-color: #1f1f1f;
   text-align: center;
@@ -106,4 +119,179 @@ body {
   border-top: 1px solid #333;
   font-size: 0.875rem;
   color: #aaa;
+}
+
+/* ===========================
+   Index Page Enhancements
+   =========================== */
+
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.profile-pic-wrapper {
+  flex: 0 0 150px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00bcd4;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+/* ===========================
+   Resume Page Enhancements
+   =========================== */
+
+.resume h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resume a {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+.resume-section {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #f1f1f1;
+}
+
+.job, .project {
+  margin-bottom: 2rem;
+}
+
+.job h4,
+.project h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.job p,
+.project p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+ul {
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
+.resume p {
+  margin-bottom: 1rem;
+}
+
+/* Indentation for section content on resume page */
+
+.resume-section > .job,
+.resume-section > .project,
+.resume-section > .skill-group {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.resume-section > ul,
+.resume-section > p {
+  margin-left: 1rem;
+}
+.skill-group p,
+.skill-group ul {
+  margin-left: 1rem;
+}
+
+/* Resume Download formatting */
+
+.resume-download {
+  background-color: #1b1b1b;
+  border: 1px solid #333;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.resume-download a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-download a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Documentation Page Enhancements
+   =========================== */
+
+   main section {
+  margin-bottom: 3rem;
+}
+
+main h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+main ul, main ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+/* Table of Contents styling */
+main ol li a {
+  text-decoration: none;
+  color: var(--accent-color, teal); /* fallback to teal if no variable */
+}
+
+main ol li a:hover {
+  text-decoration: underline;
 }

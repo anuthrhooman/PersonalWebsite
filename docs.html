@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlotte Lyons • Documentation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Charlotte Lyons</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <section>
+       <h2>Table of Contents</h2>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#tech-stack">Tech Stack</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#structure-design">Structure & Design</a></li>
+          <li><a href="#planned-improvements">Planned Improvements</a></li>
+          <li><a href="#developer-info">Developer Info</a></li>
+        </ol>
+      </section>
+
+      <section id="overview">
+        <h2>1. Overview</h2>
+        <p>The purpose of this website is to demonstrate my technical skills, foundational knowledge, and hands-on experience as I transition into the IT field. My goal is to use this platform to support my search for an entry-level IT role while laying the foundation for my long-term career path into DevOps.</p>
+        <p>This site was developed and is maintained using Visual Studio Code and Git, and it’s hosted on an AWS EC2 instance running Apache. I intentionally avoided using site builders or templates to focus on the underlying elements — building a site where I can work directly with both the code and the hosted environment.</p>
+        <p>In addition to serving as a portfolio, this site is an ongoing learning project. It documents what I’ve built, how it works, and what I plan to improve. My projects extend beyond the website itself — for example, I’ve been using Python scripting and software-defined radio (SDR) tools to capture and decode satellite data. I plan to document and share more of this technical work here over time.</p>
+      </section>
+
+      <section id="tech-stack">
+        <h2>2. Tech Stack</h2>
+        <p>This website was built using a lightweight and accessible front-end stack: HTML, CSS, and a very small amount of JavaScript. This may expand over time, but I wanted something simple and clean to start with. All code is written and edited locally in Visual Studio Code, version-controlled with Git, and then pushed to GitHub, which I use as the remote repository for managing and storing the code. From there, I pull updates directly onto my production server.</p>
+        <p>The site is hosted on an AWS EC2 instance running Ubuntu, with Apache as the web server. I chose to host it in the cloud rather than on my local Raspberry Pi 5 so the server would remain fully detached from my home network — both for security reasons and to gain experience working in a true cloud environment. This setup gives me hands-on experience with running a live Linux server, including basic configuration tasks like securing the site with HTTPS and reviewing Apache’s setup when needed. It also gives me full control over the environment and the flexibility to grow the site however I want in the future.</p>
+        <p>I secured the site using HTTPS via Let’s Encrypt and Certbot, which handled most of the setup automatically — including setting up the secure connection and redirecting visitors from HTTP to HTTPS. My domain name is registered through Squarespace (originally Google Domains), and DNS is currently configured to point directly to the EC2 instance’s public IP. This was a simple way to get started, but I plan to migrate DNS to Route 53 once I move off the free EC2 tier, so everything lives within AWS and I have more control over DNS management.</p>
+        <p>I chose this stack not only for its simplicity and reliability, but because it gives me direct, hands-on experience with the foundational components of hosting and deployment — without relying on site builders or managed platforms that abstract away the technical details.</p>
+
+        <h3>Tools & Technologies Used</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Visual Studio Code</li>
+            <li>Git (for version control)</li>
+            <li>GitHub (for remote code repository)</li>
+            <li>Ubuntu Server (AWS EC2)</li>
+            <li>Apache Web Server</li>
+            <li>Certbot / Let’s Encrypt (for HTTPS)</li>
+            <li>Squarespace (for domain registration & DNS management)</li>
+            <li>Route 53 (planned DNS migration)</li>
+          </ul>
+      </section>
+
+      <section id="workflow">
+        <h2>3. Workflow</h2>
+        <p>I wanted my workflow to mimic real-world development and deployment, even though I recognize it's overkill for a site of this size and scope. While I know there are more streamlined and efficient ways to manage a website this small, I wanted to structure things like this on purpose to build habits and hands-on experience that would apply beyond just this project and into any real-world application.</p>
+        <p>All development starts locally in Visual Studio Code, where I write and edit the site’s HTML, CSS, and JavaScript files. While it’s currently a simple front-end setup, I plan to expand the site’s functionality over time — possibly adding Python scripting and other tools to support more advanced, behind-the-scenes features. I use Live Server to preview changes in real time as I work. Once I’m happy with the update, I commit the changes using Git, then push them to GitHub, which serves as the central remote repository for the project.</p>
+        <p>I maintain two Git branches to manage development:</p>
+        <ul>
+          <li><code>dev</code> is my working branch for ongoing edits and testing</li>
+          <li><code>main</code> is my production branch — only changes that are ready to go live get pushed here</li>
+        </ul>
+        <p>To publish updates, I SSH into my EC2 server and pull the latest version of the <code>main</code> branch from GitHub. Since Apache serves the latest files immediately, the site goes live as soon as the pull completes. If anything goes wrong, I can roll back or troubleshoot directly on the server.</p>
+        <p>This may be more than necessary for a basic static site, but that’s the point — I’m using this project to build real-world experience with tools and workflows that go far beyond this site alone.</p>
+      </section>
+
+      <section id="structure-design">
+        <h2>4. Structure &amp; Design</h2>
+        <p>The layout of the site is meant to be simple — every page uses the same header, navigation bar, and footer to keep things clean and consistent no matter where you land. I didn’t want a flashy design or anything overly complicated; I wanted something that looks good, works well, and stays out of the way so the content can speak for itself.</p>
+        <p>All of the styling is handled in a single <code>style.css</code> file to keep things organized and easy to maintain. My goal was to keep the design clean and professional, avoiding unnecessary or flashy elements that might distract from the actual content.</p>
+        <p>The site is organized in a straightforward way to avoid unnecessary complexity. All of the main HTML files — like <code>index.html</code>, <code>resume.html</code>, and <code>docs.html</code> — are in the root directory, with supporting files like images stored in an <code>assets/</code> folder. This kind of structure keeps things easy to manage and leaves room for the site to grow in a way that stays clean and understandable.</p>
+        <p>The layout and structure may evolve over time as I add new features or pages, but the foundation is designed to stay simple and scalable. I wanted a site that I could build on as I grow — not just something that looks finished, but something that’s flexible enough to keep up with where I’m headed.</p>
+      </section>
+
+      <section id="planned-improvements">
+        <h2>5. Planned Improvements</h2>
+        <p>This site is still a work in progress, and I plan to keep expanding and refining it over time. Some of the upcoming improvements I have in mind include:</p>
+        <ul>
+          <li>Adding a proper README to the GitHub repository to better document the site’s structure and deployment process</li>
+          <li>Migrating DNS from Squarespace to AWS Route 53 once I’m off the free EC2 tier</li>
+          <li>Linking to my Credly badges and certifications</li>
+          <li>Continuing to document and showcase more technical work, like Python scripting and SDR (software-defined radio) projects</li>
+          <li>Eventually expanding the <code>docs.html</code> page into a more dynamic documentation hub or knowledge base</li>
+        </ul>
+        <p>While the site is already fully functional, I’m treating it as an evolving project — both as a learning tool and a living portfolio.</p>
+      </section>
+
+      <section id="developer-info">
+        <h2>6. Developer Info</h2>
+        <p>If you’d like to get in touch with questions, feedback, or interview opportunities, I can be reached at <a href="mailto:char.lyons84@gmail.com">char.lyons84@gmail.com</a>.</p>
+        <p>You can also view the source code for this website on GitHub:<br>
+          <a href="https://github.com/anuthrhooman/PersonalWebsite" target="_blank">github.com/anuthrhooman/PersonalWebsite</a>
+        </p>
+        <p><strong>Last updated:</strong> July 2025</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Charlotte Lyons. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
