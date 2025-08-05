@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+:root {
+  --accent-color: #00bcd4;
+}
+
 body {
   background-color: #121212;
   color: #f1f1f1;
@@ -56,7 +60,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #00bcd4;
+  color: var(--accent-color);
 }
 
 /* ===========================
@@ -73,7 +77,7 @@ body {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #00bcd4;
+  border: 2px solid var(--accent-color);
   margin-bottom: 1.5rem;
 }
 
@@ -97,7 +101,7 @@ body {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #00bcd4;
+  background-color: var(--accent-color);
   color: #121212;
   font-weight: bold;
   border-radius: 6px;
@@ -137,13 +141,13 @@ body {
   flex: 0 0 150px;
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #00bcd4;
-}
+ .profile-pic {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px solid var(--accent-color);
+ }
 
 .intro-text {
   flex: 1;
@@ -171,7 +175,7 @@ body {
 }
 
 .resume a {
-  color: #00bcd4;
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
@@ -251,7 +255,7 @@ li {
 }
 
 .resume-download a {
-  color: #00bcd4;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -289,7 +293,7 @@ main li {
 /* Table of Contents styling */
 main ol li a {
   text-decoration: none;
-  color: var(--accent-color, teal); /* fallback to teal if no variable */
+  color: var(--accent-color);
 }
 
 main ol li a:hover {
